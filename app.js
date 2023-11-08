@@ -6,5 +6,9 @@
     .controller("NameCalculatorController", function ($scope) {
       $scope.name = "";
       $scope.totalValue = 0;
+      $scope.displayNumeric = function () {
+        $scope.totalNameValue = 0; // get the total value
+        $scope.totalValue = totalNameValue;
+      };
     });
 })();
