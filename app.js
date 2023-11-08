@@ -3,5 +3,7 @@
   "use strict";
   angular
     .module("NameCalculator", [])
-    .controller("NameCalculatorController", function ($scope) {});
+    .controller("NameCalculatorController", function ($scope) {
+      $scope.name = "";
+    });
 })();
