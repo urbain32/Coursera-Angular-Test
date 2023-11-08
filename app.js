@@ -6,5 +6,8 @@
     // $ should not be used it is only for angular given var when we declare var
     .controller("myFirstController", function ($scope) {
       $scope.name = "Urban";
+      $scope.sayHello = function () {
+        return "Hello Coursera";
+      };
     });
 })();
