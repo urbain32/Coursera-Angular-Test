@@ -1,1 +1,3 @@
-(function () {})();
+(function () {
+  angular.module("myFirstApp", []);
+})();
