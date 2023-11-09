@@ -9,5 +9,8 @@
     $scope.sayMessage = function () {
       return "Yaakov likes to eat healthy snacks!";
     };
+    $scope.feedYaakov = function () {
+      $scope.stateOfBeing = "feed";
+    };
   }
 })();
