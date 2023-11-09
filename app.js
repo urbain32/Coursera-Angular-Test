@@ -1,16 +1,23 @@
 (function () {
   "use strict";
 
-  angular.module("MsgApp", []).controller("MsgController", MsgController);
-  MsgController.$inject = ["$scope"];
-  function MsgController($scope) {
-    $scope.name = "Yaakov";
-    $scope.stateOfBeing = "Hungry";
-    $scope.sayMessage = function () {
-      return "Yaakov likes to eat healthy snacks!";
-    };
-    $scope.feedYaakov = function () {
-      $scope.stateOfBeing = "feed";
-    };
-  }
+  angular
+    .module("LunchCheck", [])
+    .controller("LunchCheckController", function ($scope) {
+      $scope.checkLunch = function () {
+        if (!$scope.items) {
+          $scope.message = "Please enter data first!";
+          return;
+        }
+
+        var items = $scope.items.split(",");
+        var numItems = items.length;
+
+        if (numItems <= 3) {
+          $scope.message = "Enjoy!";
+        } else {
+          $scope.message = "Too much!";
+        }
+      };
+    });
 })();
