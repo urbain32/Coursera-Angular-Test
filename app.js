@@ -4,7 +4,6 @@
   angular
     .module("LunchCheck", [])
     .controller("LunchCheckController", function ($scope) {
-      $scope.name = "Urban";
       $scope.checkLunch = function () {
         if (!$scope.items) {
           $scope.message = "Please enter data first!";
