@@ -7,6 +7,8 @@
       .controller("AlreadyBoughtController", AlreadyBoughtController)
       .service("ShoppingListCheckOffService", ShoppingListCheckOffService);
 
+    ToBuyController.$inject = ["ShoppingListCheckOffService"];
+
     // creating our function service which is a singleton
     function ShoppingListCheckOffService() {
       var service = this;
