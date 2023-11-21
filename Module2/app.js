@@ -3,7 +3,8 @@
     "use strict";
     angular
       .module("ShoppingListCheckOff", [])
-      .controller("ToBuyController ")
-      .controller("AlreadyBoughtController");
+      .controller("ToBuyController", ToBuyController)
+      .controller("AlreadyBoughtController", AlreadyBoughtController)
+      .service("ShoppingListCheckOffService", ShoppingListCheckOffService);
   })();
 }
