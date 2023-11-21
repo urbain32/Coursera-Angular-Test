@@ -18,6 +18,11 @@
         { name: "bananas", quantity: 7 },
       ];
       var alreadyBoughtItems = [];
+      service.buyItem = function (itemIndex) {
+        var item = toBuyItems[itemIndex];
+        alreadyBoughtItems.push(item);
+        toBuyItems.splice(itemIndex, 1);
+      };
     }
   })();
 }
