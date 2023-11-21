@@ -1,6 +1,9 @@
 {
   (function () {
     "use strict";
-    angular.module("ShoppingListCheckOff", []).controller("ToBuyController ");
+    angular
+      .module("ShoppingListCheckOff", [])
+      .controller("ToBuyController ")
+      .controller("AlreadyBoughtController");
   })();
 }
