@@ -23,6 +23,12 @@
         alreadyBoughtItems.push(item);
         toBuyItems.splice(itemIndex, 1);
       };
+      service.getBuyitem = function () {
+        return toBuyItems;
+      };
+      service.getAlreadyBoughtItems = function () {
+        return alreadyBoughtItems;
+      };
     }
   })();
 }
