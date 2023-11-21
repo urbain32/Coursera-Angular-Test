@@ -8,6 +8,14 @@
       .service("ShoppingListCheckOffService", ShoppingListCheckOffService);
 
     ToBuyController.$inject = ["ShoppingListCheckOffService"];
+    // creating the function for ToBuyController
+    function ToBuyController(ShoppingListCheckOffService) {
+      var toBuyList = this;
+      toBuyList.items = ShoppingListCheckOffService.getToBuyitems();
+      toBuyList.buyItem = function (itemIndex) {
+        ShoppingListCheckOffService.buyItem(itemIndex);
+      };
+    }
 
     // creating our function service which is a singleton
     function ShoppingListCheckOffService() {
@@ -25,7 +33,7 @@
         alreadyBoughtItems.push(item);
         toBuyItems.splice(itemIndex, 1);
       };
-      service.getBuyitem = function () {
+      service.getToBuyitems = function () {
         return toBuyItems;
       };
       service.getAlreadyBoughtItems = function () {
